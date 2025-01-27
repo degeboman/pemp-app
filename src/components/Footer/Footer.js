@@ -12,7 +12,7 @@ export default () => {
         <Footer>
           <Divider style={{ borderColor: '#001529' }}></Divider>
           <Row>
-            <Col span={8}>
+            <Col xl={8} xs={24}>
               <Paragraph>
                 Contact me or visit me at 
               </Paragraph>
@@ -20,15 +20,15 @@ export default () => {
                 Gdansk Poland, Junony 24,80-299
               </Paragraph>
             </Col>
-            <Col span={8}>
+            <Col xl={8} xs={24}>
                 <Image
                     preview={false}
                     style={{width: 100, height: 100}}
                     src={logo2}
                 />
             </Col>
-            <Col span={8}>
-            <Flex wrap gap="large" vertical>
+            <Col xl={8} xs={24}>
+            <Flex wrap gap="small" vertical>
               <Flex wrap gap="small">
                 <InstagramOutlined /> pembcc
               </Flex>

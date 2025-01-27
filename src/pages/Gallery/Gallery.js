@@ -4,6 +4,12 @@ import Footer from  '../../components/Footer/Footer';
 
 import canvaces1 from '../../images/canvaces1.jpg';
 import canvaces2 from '../../images/canvaces2.JPG';
+import canvaces3 from '../../images/canvaces3.jpg';
+import canvaces4 from '../../images/canvaces4.jpg';
+import canvaces5 from '../../images/canvaces5.png';
+import canvaces6 from '../../images/canvaces6.png';
+import canvaces7 from '../../images/canvaces7.png';
+
 import image1 from '../../images/image1.jpg';
 import image2 from '../../images/image2.jpg';
 import image3 from '../../images/image3.jpg';
@@ -15,16 +21,6 @@ import image8 from '../../images/image8.jpg';
 import image9 from '../../images/image9.jpg';
 
 const { Content } = Layout;
-
-const { Paragraph, Title } = Typography;
-const contentStyle = {
-    margin: 0,
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
 
 export default () => {
     return (
@@ -46,27 +42,45 @@ export default () => {
                                 width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={canvaces1}
+                                src={canvaces2}
+                            />
+                            <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={canvaces3}
+                            />
+                            <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={canvaces4}
                             />
                              <Image
                                 width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={canvaces2}
+                                src={canvaces6}
                             />
                         </Card>
                         <Card title="Canvases 2023" bordered={false}>
-                            <Image
-                                width={300}
+                        <Image
+                                width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={image2}
+                                src={canvaces1}
                             />
                             <Image
-                                width={300}
+                                width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={image3}
+                                src={canvaces5}
+                            />
+                             <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={canvaces7}
                             />
                         </Card>
                         <Card title="Cover designs" bordered={false}>
@@ -105,6 +119,24 @@ export default () => {
                                 height={300}
                                 style={{padding:'5%'}}
                                 src={image9}
+                            />
+                            <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={image1}
+                            />
+                            <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={image2}
+                            />
+                            <Image
+                                width={240}
+                                height={300}
+                                style={{padding:'5%'}}
+                                src={image3}
                             />
                         </Card>
                     </Flex>

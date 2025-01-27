@@ -17,23 +17,33 @@ export default () => {
                 }}
             >
                 <Row>
-                    <Col span={12}>
+                    <Col 
+                    // span={12}
+                     xl={12}
+                     xs={24}
+                     >
                         <Title>About Me</Title>
                         <Paragraph>
-                            Hello, I'm Nikita, a multifaceted artist currently based in Gdańsk, Poland. Born in Vitebsk, Belarus, my artistic journey has been shaped by a deep-rooted passion for creativity and a profound appreciation for freedom.
+                            Hi! My name is Mikita Pemb. I’m originally from Vitebsk, Belarus, but now I live in Gdańsk, Poland. For over ten years, graffiti has been my passion and my way of self-expression. Since 2020, I’ve been channeling the energy of the streets onto canvases and creating unique cover designs for music releases. My work is a genuine reflection of my journey—a blend of the vibrant chaos of street art with a desire to push boundaries and explore new creative horizons.
                         </Paragraph>
                         <Paragraph>
-                            My work spans various mediums, including vibrant graffiti murals that bring urban landscapes to life, intricate canvas paintings that explore the depths of human emotion, and captivating album covers for musicians that visually complement their auditory artistry. Each piece I create is a reflection of my personal experiences and the boundless inspiration I draw from the world around me.
+                            In my technique, I combine the boldness of spray paint with the versatility of acrylics, adding fine details using squeezers and markers. Every piece I create is a celebration of the style I discovered on the streets, transformed into something that resonates with a broader audience.
                         </Paragraph>
                         <Paragraph>
-                            Freedom is a central theme in my art. It represents not just physical liberty, but also the freedom of thought, expression, and the pursuit of one's dreams. Through my art, I aim to inspire others to embrace their own freedoms and to find beauty in the everyday moments of life.
+                            I’ve had the privilege of participating in various exhibitions and constantly strive to promote my unique artistic vision. My dream is to collaborate with galleries and establish myself in larger, more ambitious art spaces, as I believe my style has the potential to reach far beyond the world of street art.
                         </Paragraph>
                         <Paragraph>
-                            Thank you for visiting my website and exploring my artistic journey. I hope my work resonates with you and brings a touch of inspiration to your day.
+                            On this platform, you’ll only see my art projects, but I’m happy to share my graffiti work with anyone who’s interested. In addition to speaking Polish at a conversational level, I’m also learning English, which opens new opportunities to showcase my art and connect with an international audience. Art isn’t just something I do—it’s who I am.
+                        </Paragraph>
+                        <Paragraph>
+                            Let’s create something extraordinary together!
                         </Paragraph>
                         <Button value="default"><Link to="/gallery">Gallery</Link></Button>
                     </Col>
-                    <Col span={12}>
+                    <Col 
+                        xl={12}
+                        xs={24}
+                        >
                         <Carousel />
                     </Col>
                 </Row>

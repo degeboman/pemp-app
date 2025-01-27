@@ -34,17 +34,17 @@ export default () => {
                     >
                         <Card title="My exhibitions" bordered={false}>
                             <Row>
-                                <Col span={12}>
+                                <Col xl={12} xs={24}>
                                     <Paragraph>House of contemporary art in Vitebsk-2020</Paragraph>
                                     <Paragraph>The Slavic Bazaar in Vitebsk is the largest and most popular festival of arts and culture in Belarus-2021
                                     </Paragraph>
                                     <Paragraph>Turnus na Wolskiej, Galeria sztuki -2023</Paragraph>
                                     <Paragraph>Gallery lay up in Gdansk (Poland)-2024</Paragraph>
                                 </Col>
-                                <Col span={12}>
+                                <Col xl={12} xs={24}>
                                         <Image
-                                        width={300}
-                                        height={400}
+                                        width={250}
+                                        height={350}
                                         style={{padding:'5%'}}
                                         src={vitebsk}
                                     />
