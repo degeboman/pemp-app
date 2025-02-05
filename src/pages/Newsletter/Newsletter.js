@@ -1,4 +1,4 @@
-import { Layout,Col, Button, Checkbox, Input, Typography, Row, theme, Image, Form } from 'antd';
+import { Layout,Col, Button, Input, Typography, Row, theme, Image, Form, notification } from 'antd';
 import Header from '../../components/Header/Header';
 import Footer from  '../../components/Footer/Footer';
 
@@ -7,40 +7,51 @@ import  image1 from '../../images/IMG_3822.PNG';
 const { Content } = Layout;
 const { Paragraph, Title } = Typography;
 
-const onFinish = async (values) => {
-    try {
-        const response = await fetch('https://formspree.io/manqbydz', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },        
-            body: JSON.stringify({
-                chat_id: 670052995,
-                text: "На вас подписался " + values.Name + ". Его email - "+ values.email,
-              }),
-          });
-
-      if (response.ok) {
-        console.log('Сообщение успешно отправлено');
-      } else {
-        console.error('Ошибка при отправке сообщения');
-      }
-    } catch (error) {
-      console.error('Ошибка:', error);
-    }
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
-
 export default () => {
+    const [api, contextHolder] = notification.useNotification();
      const {
         token: { colorBgContainer, borderRadiusLG },
       } = theme.useToken();
     
+      const onFinish = async (values) => {
+        try {
+            const response = await fetch('https://formspree.io/manqbydz', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },        
+                body: JSON.stringify({
+                    chat_id: 670052995,
+                    text: "На вас подписался " + values.Name + ". Его email - "+ values.email,
+                  }),
+              });
+    
+          if (response.ok) {
+            api.success({
+                message: 'Success',
+                description: 'subscription successfully completed!',
+              });
+            console.log('Сообщение успешно отправлено');
+          } else {
+            console.error('Ошибка при отправке сообщения');
+          }
+        } catch (error) {
+          console.error('Ошибка:', error);
+        }
+      };
+
+      const onFinishFailed = (errorInfo) => {
+        api.error({
+            message: 'Error',
+            description: 'Please retry!',
+            placement: 'topRight',
+          });
+        console.log('Failed:', errorInfo);
+      };
+
     return (
         <Layout >
+            {contextHolder}
             <Header />
                 <Content
                 style={{
