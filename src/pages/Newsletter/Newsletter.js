@@ -8,19 +8,17 @@ const { Content } = Layout;
 const { Paragraph, Title } = Typography;
 
 const onFinish = async (values) => {
-    const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
-
     try {
-      const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: 670052995,
-          text: "На вас подписался " + values.Name + ". Его email - "+ values.email,
-        }),
-      });
+        const response = await fetch('https://formspree.io/manqbydz', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },        
+            body: JSON.stringify({
+                chat_id: 670052995,
+                text: "На вас подписался " + values.Name + ". Его email - "+ values.email,
+              }),
+          });
 
       if (response.ok) {
         console.log('Сообщение успешно отправлено');
