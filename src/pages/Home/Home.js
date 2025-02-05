@@ -18,7 +18,6 @@ export default () => {
             >
                 <Row>
                     <Col 
-                    // span={12}
                      xl={12}
                      xs={24}
                      >

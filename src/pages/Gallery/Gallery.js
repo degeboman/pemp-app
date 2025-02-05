@@ -19,6 +19,8 @@ import image6 from '../../images/image6.jpg';
 import image7 from '../../images/image7.jpg'; 
 import image8 from '../../images/image8.jpg';
 import image9 from '../../images/image9.jpg';
+import image10 from '../../images/IMG_1743.PNG';
+import image11 from '../../images/IMG_1590.PNG';
 
 const { Content } = Layout;
 
@@ -42,13 +44,13 @@ export default () => {
                                 width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={canvaces2}
+                                src={canvaces3}
                             />
                             <Image
                                 width={240}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={canvaces3}
+                                src={image11}
                             />
                             <Image
                                 width={240}
@@ -88,6 +90,12 @@ export default () => {
                                 width={300}
                                 height={300}
                                 style={{padding:'5%'}}
+                                src={image10}
+                            />
+                            <Image
+                                width={300}
+                                height={300}
+                                style={{padding:'5%'}}
                                 src={image4}
                             />
                             <Image
@@ -121,19 +129,19 @@ export default () => {
                                 src={image9}
                             />
                             <Image
-                                width={240}
+                                width={300}
                                 height={300}
                                 style={{padding:'5%'}}
                                 src={image1}
                             />
                             <Image
-                                width={240}
+                                width={300}
                                 height={300}
                                 style={{padding:'5%'}}
                                 src={image2}
                             />
                             <Image
-                                width={240}
+                                width={300}
                                 height={300}
                                 style={{padding:'5%'}}
                                 src={image3}
