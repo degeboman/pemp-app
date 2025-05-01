@@ -1,67 +1,46 @@
 import { Carousel, Image } from 'antd';
 
-import image1 from '../../images/image1.jpg';
-import image2 from '../../images/image2.jpg';
-import image3 from '../../images/image3.jpg';
-import image4 from '../../images/image4.jpg';
-import image5 from '../../images/IMG_1841.JPG';
-import image6 from '../../images/IMG_1343.PNG';
+import live1 from '../../images/live1.JPG';
+import live2 from '../../images/live2.JPG';
+import live3 from '../../images/live3.JPG';
 
 const contentStyle = {
     height: '100%',
     width: '100%',
     color: '#fff',
     textAlign: 'center',
+    padding:'3%',
   };
+
+  // 210
+  // 297
 
 export default () => {
     return  (
-        <Carousel arrows autoplay  infinite={true}>
+        <Carousel 
+            arrows
+            autoplay
+            infinite={true}
+            adaptiveHeight={true}
+        >
             <div>
                 <h3 style={contentStyle}>
                     <Image
-                        style={{padding:'5%'}}
-                        src={image1}
+                        src={live1}
                     />
                 </h3>
             </div>
             <div>
             <h3 style={contentStyle}>
                     <Image
-                        style={{padding:'5%'}}
-                        src={image6}
+                        src={live2}
                     />
                 </h3>
             </div>
             <div>
                 <h3 style={contentStyle}>
                     <Image
-                        style={{padding:'5%'}}
-                        src={image5}
-                    />
-                </h3>
-            </div>
-            <div>
-            <h3 style={contentStyle}>
-                    <Image
-                        style={{padding:'5%'}}
-                        src={image2}
-                    />
-                </h3>
-            </div>
-            <div>
-            <h3 style={contentStyle}>
-                    <Image
-                        style={{padding:'5%'}}
-                        src={image3}
-                    />
-                </h3>
-            </div>
-            <div>
-                 <h3 style={contentStyle}>
-                    <Image
-                        style={{padding:'5%'}}
-                        src={image4}
+                        src={live3}                      
                     />
                 </h3>
             </div>

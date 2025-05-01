@@ -1,6 +1,6 @@
 
 import { Layout, Col, Row, Typography, Flex, Divider, Image} from 'antd';
-import {InstagramOutlined, WhatsAppOutlined} from '@ant-design/icons'
+import {InstagramOutlined, WhatsAppOutlined, MailOutlined} from '@ant-design/icons'
 
 import logo2 from '../../images/logo2.PNG'
 
@@ -17,7 +17,7 @@ export default () => {
                 Contact me or visit me at 
               </Paragraph>
               <Paragraph>
-                Gdansk Poland, Junony 24,80-299
+                Gdansk Poland
               </Paragraph>
             </Col>
             <Col xl={8} xs={24}>
@@ -31,6 +31,9 @@ export default () => {
             <Flex wrap gap="small" vertical>
               <Flex wrap gap="small">
                 <InstagramOutlined /> pembcc
+              </Flex>
+              <Flex>
+                <MailOutlined /><p style={{marginLeft:'10px'}}>     Msushchevich@gmail.com</p>
               </Flex>
               <Flex>
                 <WhatsAppOutlined /> +48 537 569 864

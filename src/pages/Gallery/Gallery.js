@@ -24,6 +24,33 @@ import image11 from '../../images/IMG_1590.PNG';
 
 const { Content } = Layout;
 
+const ImageWithCaption = (src,name, description) => (
+    <Card
+        hoverable
+        style={{ width: 240 }}
+        cover={
+        <Image
+            width={240}
+            height={300}
+            style={{padding:'5%'}}
+            src={src}
+            preview={{
+            toolbarRender: (
+                                        _,
+                                        ) => (
+                                        <div style={{ color: 'white', padding: '10px' }}>
+                                            <div style={{ fontWeight: 'bold' }}>{name}</div>
+                                            <div>{description}</div>
+                                        </div>
+                                        ),
+                                    }}
+                                />
+                                }
+                            >
+                                <Card.Meta title={name} description={description} />
+                            </Card>
+  );
+
 export default () => {
     return (
         <Layout >
@@ -40,50 +67,19 @@ export default () => {
                         gap="large"
                     >
                          <Card title="Canvases 2024" bordered={false}>
-                            <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces3}
-                            />
-                            <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={image11}
-                            />
-                            <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces4}
-                            />
-                             <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces6}
-                            />
+                            <Flex gap="middle" wrap="wrap">
+                                {ImageWithCaption(canvaces2, "TEKKEN 28", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
+                                {ImageWithCaption(image11, "Indigo concrete", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
+                                {ImageWithCaption(canvaces4, "No chance", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
+                                {ImageWithCaption(canvaces6, "CC Night", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
+                            </Flex>
                         </Card>
                         <Card title="Canvases 2023" bordered={false}>
-                        <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces1}
-                            />
-                            <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces5}
-                            />
-                             <Image
-                                width={240}
-                                height={300}
-                                style={{padding:'5%'}}
-                                src={canvaces7}
-                            />
+                            <Flex gap="middle" wrap="wrap">
+                                {ImageWithCaption(canvaces1, "Zmiy", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2023')}
+                                {ImageWithCaption(canvaces5, "Lufen", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2023')}
+                                {ImageWithCaption(canvaces7, "Partizan", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2023')}
+                            </Flex>
                         </Card>
                         <Card title="Cover designs" bordered={false}>
                             <Image
