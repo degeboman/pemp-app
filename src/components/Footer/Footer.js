@@ -10,39 +10,28 @@ const { Paragraph} = Typography;
 export default () => {
     return (
         <Footer>
-          <Divider style={{ borderColor: '#001529' }}></Divider>
           <Row>
-            <Col xl={8} xs={24}>
-              <Paragraph>
+            <Col xl={24} xs={24} style={{ textAlign: 'right', alignItems: 'flex-end' }}>
+              <Paragraph style={{ margin: 0 }}>
                 Contact me or visit me at 
               </Paragraph>
-              <Paragraph>
+              <Paragraph style={{ margin: 0 }}>
                 Gdansk Poland
               </Paragraph>
-            </Col>
-            <Col xl={8} xs={24}>
-                <Image
-                    preview={false}
-                    style={{width: 100, height: 100}}
-                    src={logo2}
-                />
-            </Col>
-            <Col xl={8} xs={24}>
-            <Flex wrap gap="small" vertical>
-              <Flex wrap gap="small">
-                <InstagramOutlined /> pembcc
+              <Flex wrap gap="small" vertical style={{ alignItems: 'flex-end' }}>
+                <Flex wrap gap="small" style={{ justifyContent: 'flex-end' }}>
+                  <InstagramOutlined /> 
+                  <span>pembcc</span>
+                </Flex>
+                <Flex style={{ justifyContent: 'flex-end' }}>
+                  <MailOutlined />
+                  <span style={{ marginLeft: '10px' }}>Msushchevich@gmail.com</span>
+                </Flex>   
               </Flex>
-              <Flex>
-                <MailOutlined /><p style={{marginLeft:'10px'}}>     Msushchevich@gmail.com</p>
-              </Flex>
-              <Flex>
-                <WhatsAppOutlined /> +48 537 569 864
-              </Flex>
-            </Flex>
             </Col>
           </Row>
-          <Row>
-            <Col span={24}>
+          <Row justify="center">
+            <Col span={24} style={{ textAlign: 'center' }}>
               Copyright © {new Date().getFullYear()} | All Rights Reserved
             </Col>
           </Row>

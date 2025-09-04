@@ -1,8 +1,6 @@
-import { Layout,Col, Button, Input, Typography, Row, theme, Image, Form, notification } from 'antd';
+import { Layout,Col, Button, Input, Typography, Row, theme, Flex, Form, notification } from 'antd';
 import Header from '../../components/Header/Header';
 import Footer from  '../../components/Footer/Footer';
-
-import  image1 from '../../images/IMG_3822.PNG';
 
 const { Content } = Layout;
 const { Paragraph, Title } = Typography;
@@ -65,12 +63,16 @@ export default () => {
                     minHeight: 380,
                     background: colorBgContainer,
                     borderRadius: borderRadiusLG,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
                     }}
                 >
-                    <Row>
+                    <Row justify="center" style={{ width: '100%' }}>
                         <Col 
-                            xl={12}
+                            xl={16}
                             xs={24}
+                            style={{ textAlign: 'center' }}
                         >
                             <Title>Artist Newsletter</Title>
                             <Paragraph>
@@ -79,67 +81,52 @@ export default () => {
                             <Paragraph>
                             Get exclusive content that I only share with email subscribers. Sign up for the latest news from Pemb about events, original work, or products.
                             </Paragraph>
-                            <Form
-                                name="basic"
-                                labelCol={{
-                                span: 8,
-                                }}
-                                wrapperCol={{
-                                span: 16,
-                                }}
-                                style={{
-                                maxWidth: 600,
-                                }}
-                                initialValues={{
-                                remember: true,
-                                }}
-                                onFinish={onFinish}
-                                onFinishFailed={onFinishFailed}
-                                autoComplete="off"
-                            >
-                                <Form.Item
-                                label="Name"
-                                name="Name"
-                                rules={[
-                                    {
-                                    required: true,
-                                    message: 'Please input your Name!',
-                                    },
-                                ]}
+                            
+                            <Flex justify="center">
+                                <Form
+                                    name="basic"
+                                    style={{
+                                    maxWidth: 600,
+                                    width: '100%'
+                                    }}
+                                    initialValues={{
+                                    remember: true,
+                                    }}
+                                    onFinish={onFinish}
+                                    onFinishFailed={onFinishFailed}
+                                    autoComplete="off"
                                 >
-                                <Input />
-                                </Form.Item>
+                                    <Form.Item
+                                    name="Name"
+                                    rules={[
+                                        {
+                                        required: true,
+                                        message: 'Please input your Name!',
+                                        },
+                                    ]}
+                                    >
+                                    <Input placeholder="Your Name" />
+                                    </Form.Item>
 
-                                <Form.Item
-                                label="Email"
-                                name="email"
-                                rules={[
-                                    {
-                                    required: true,
-                                    message: 'Please input your Email!',
-                                    },
-                                ]}
-                                >
-                                <Input />
-                                </Form.Item>
+                                    <Form.Item
+                                    name="email"
+                                    rules={[
+                                        {
+                                        required: true,
+                                        message: 'Please input your Email!',
+                                        },
+                                    ]}
+                                    >
+                                    <Input placeholder="Your Email" />
+                                    </Form.Item>
 
-                                <Form.Item label={null}>
-                                <Button type="primary" htmlType="submit">
-                                    Subcribe
-                                </Button>
-                                </Form.Item>
-                            </Form>
-                        </Col>
-                        <Col
-                            xl={12}
-                            xs={24}
-                        >
-                                <Image
-                                width={400}
-                                height={600}
-                                style={{padding:'5%'}}
-                                src={image1}
-                            />
+                                    <Form.Item>
+                                    <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
+                                        Subscribe
+                                    </Button>
+                                    </Form.Item>
+                                </Form>
+                            </Flex>
                         </Col>
                     </Row>
                 </div>

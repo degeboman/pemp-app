@@ -5,6 +5,8 @@ import Header from '../../components/Header/Header';
 import Footer from  '../../components/Footer/Footer';
 import Carousel from  '../../components/Carousel/Carousel';
 
+import cvFile from '../../files/Mikita.pdf';
+
 const { Paragraph, Title } = Typography;
 
 export default () => {    
@@ -40,7 +42,11 @@ export default () => {
                         <Paragraph style={{ textAlign: 'justify' }}>
                             Let’s create something extraordinary together!
                         </Paragraph>
-                        <Button value="default"><Link to="/gallery">Gallery</Link></Button>
+                        <Button type="default">
+                            <a href={cvFile}  target="_blank" download="Mikita.pdf">
+                                My CV
+                            </a>
+                        </Button>
                     </Col>
                     <Col 
                         xl={12}

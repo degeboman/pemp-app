@@ -21,6 +21,8 @@ import image8 from '../../images/image8.jpg';
 import image9 from '../../images/image9.jpg';
 import image10 from '../../images/IMG_1743.PNG';
 import image11 from '../../images/IMG_1590.PNG';
+import image12 from '../../images/IMG_2983.PNG';
+
 
 const { Content } = Layout;
 
@@ -68,7 +70,7 @@ export default () => {
                     >
                          <Card title="Canvases 2024" bordered={false}>
                             <Flex gap="middle" wrap="wrap">
-                                {ImageWithCaption(canvaces2, "TEKKEN 28", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
+                                {ImageWithCaption(canvaces3, "TEKKEN 28", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
                                 {ImageWithCaption(image11, "Indigo concrete", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
                                 {ImageWithCaption(canvaces4, "No chance", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
                                 {ImageWithCaption(canvaces6, "CC Night", 'Category: Graphic Art / Mix art (Spray Paint, Acrilic Markers, Squeezers) Gdańsk 2024')}
@@ -86,7 +88,7 @@ export default () => {
                                 width={300}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={image10}
+                                src={image1}
                             />
                             <Image
                                 width={300}
@@ -104,7 +106,7 @@ export default () => {
                                 width={300}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={image6}
+                                src={image12}
                             />
                             <Image
                                 width={300}
@@ -128,7 +130,7 @@ export default () => {
                                 width={300}
                                 height={300}
                                 style={{padding:'5%'}}
-                                src={image1}
+                                src={image10}
                             />
                             <Image
                                 width={300}

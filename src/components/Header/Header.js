@@ -18,16 +18,10 @@ export default () => {
                 width: '100%',
                 display: 'flex',
                 alignItems: 'center',
+                 justifyContent: 'space-between',
             }}
         >
-            <div>
-                <Image
-                    preview={false}
-                    style={{width: 40, height: 40, marginRight: '40px'}}
-                    src={logo}
-                />
-            </div>
-            <Menu theme="dark" mode="horizontal" selectedKeys={[location.pathname]} style={{ flex: 1, minWidth: 0 }}>
+            <Menu theme="dark" mode="horizontal" selectedKeys={[location.pathname]} style={{ flex: 1, minWidth: 0, justifyContent: 'center', }}>
                 <Menu.Item key="/">
                     <Link to="/">Home</Link>
                 </Menu.Item>
@@ -41,6 +35,13 @@ export default () => {
                     <Link to="/newsletter">News Letter</Link>
                 </Menu.Item>
             </Menu>
+             <div>
+                <Image
+                    preview={false}
+                    style={{width: 40, height: 40, marginRight: '40px'}}
+                    src={logo}
+                />
+            </div>
         </Header>
     )
 }
